@@ -1,4 +1,5 @@
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { SaleBanner } from "@/components/SaleBanner";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
@@ -18,6 +19,8 @@ export default function HeavensBake() {
     <ThemeProvider defaultTheme="light" storageKey="heavens-bake-theme">
       <div className="min-h-screen bg-background text-foreground font-sans">
         <LoadingScreen />
+        <SaleBanner />
+        <div className="h-10" aria-hidden="true" />
         <Navbar />
         
         <main>
