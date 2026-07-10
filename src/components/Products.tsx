@@ -2,14 +2,14 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ShoppingCart } from "lucide-react";
 
-import weddingCake from "@/assets/images/wedding-cake.png";
-import birthdayCake from "@/assets/images/birthday-cake.png";
-import cupcakes from "@/assets/images/cupcakes.png";
-import doughnuts from "@/assets/images/doughnuts.png";
-import cookies from "@/assets/images/cookies.png";
-import artisanBread from "@/assets/images/artisan-bread.png";
-import croissants from "@/assets/images/croissants.png";
-import pastries from "@/assets/images/pastries.png";
+import weddingCake from "@/assets/images/wedding-cake.webp";
+import birthdayCake from "@/assets/images/birthday-cake.webp";
+import cupcakes from "@/assets/images/cupcakes.webp";
+import doughnuts from "@/assets/images/doughnuts.webp";
+import cookies from "@/assets/images/cookies.webp";
+import artisanBread from "@/assets/images/artisan-bread.webp";
+import croissants from "@/assets/images/croissants.webp";
+import pastries from "@/assets/images/pastries.webp";
 
 const products = [
   { id: 1, name: "Elegant Wedding Cake", desc: "Multi-tier vanilla bean cake with custom floral designs.", price: "$150", img: weddingCake },

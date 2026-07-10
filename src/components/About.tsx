@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Users, Clock, Cake, ShoppingBag } from "lucide-react";
-import aboutImg from "@/assets/images/about.png";
+import aboutImg from "@/assets/images/about.webp";
 
 const stats = [
   { label: "Happy Customers", value: 10000, suffix: "+", icon: Users },

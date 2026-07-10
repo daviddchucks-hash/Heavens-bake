@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImg from "@/assets/images/hero.png";
+import heroImg from "@/assets/images/hero.webp";
 
 export function Hero() {
   const scrollToMenu = () => {
