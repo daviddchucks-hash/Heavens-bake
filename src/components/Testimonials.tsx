@@ -7,7 +7,7 @@ const testimonials = [
     id: 1,
     name: "Sarah Jenkins",
     location: "London, UK",
-    text: "The three-tier wedding cake Heavens Bake created for us was nothing short of spectacular. Not only was it breathtakingly beautiful with real gold leaf, but the vanilla bean sponge was the best I've ever tasted.",
+    text: "The three-tier wedding cake Bummies Bakery created for us was nothing short of spectacular. Not only was it breathtakingly beautiful with real gold leaf, but the vanilla bean sponge was the best I've ever tasted.",
     rating: 5,
     initials: "SJ"
   },

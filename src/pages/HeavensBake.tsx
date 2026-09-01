@@ -1,9 +1,9 @@
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { SaleBanner } from "@/components/SaleBanner";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { Products } from "@/components/Products";
+import { PastryClass } from "@/components/PastryClass";
 import { Offers } from "@/components/Offers";
 import { WhyUs } from "@/components/WhyUs";
 import { Gallery } from "@/components/Gallery";
@@ -16,17 +16,16 @@ import { BackToTop } from "@/components/BackToTop";
 
 export default function HeavensBake() {
   return (
-    <ThemeProvider defaultTheme="light" storageKey="heavens-bake-theme">
+    <ThemeProvider defaultTheme="light" storageKey="bummies-bakery-theme">
       <div className="min-h-screen bg-background text-foreground font-sans">
         <LoadingScreen />
-        <SaleBanner />
-        <div className="h-10" aria-hidden="true" />
         <Navbar />
         
         <main>
           <Hero />
           <About />
           <Products />
+          <PastryClass />
           <Offers />
           <WhyUs />
           <Gallery />

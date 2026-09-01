@@ -63,7 +63,7 @@ export function About() {
               </h3>
               <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  What started as a small neighborhood kitchen has blossomed into a beloved destination for artisan breads and exquisite pastries. At Heavens Bake, we believe that the secret to extraordinary flavor lies in patience, passion, and the finest ingredients.
+                  What started as a small neighborhood kitchen has blossomed into a beloved destination for artisan breads and exquisite pastries. At Bummies Bakery, we believe that the secret to extraordinary flavor lies in patience, passion, and the finest ingredients.
                 </p>
                 <p>
                   Every morning before the sun rises, our master bakers are already at work—kneading, shaping, and proofing. We honor time-tested traditional methods while embracing creative new flavors to bring you a truly elevated bakery experience.

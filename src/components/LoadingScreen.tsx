@@ -40,7 +40,7 @@ export function LoadingScreen() {
             animate={{ opacity: 1, y: 0 }}
             className="font-serif text-3xl font-bold text-foreground"
           >
-            Heavens Bake
+            Bummies Bakery
           </motion.h1>
         </motion.div>
       )}
