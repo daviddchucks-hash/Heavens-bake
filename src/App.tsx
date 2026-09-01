@@ -17,10 +17,12 @@ function Router() {
 }
 
 function App() {
+  const rawBase = import.meta.env.BASE_URL || "";
+  const baseUrl = rawBase === "./" ? "" : rawBase.replace(/\/$/, "");
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+        <WouterRouter base={baseUrl}>
           <Router />
         </WouterRouter>
         <Toaster />
