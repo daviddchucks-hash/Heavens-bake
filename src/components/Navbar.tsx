@@ -7,6 +7,7 @@ const navLinks = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
   { name: "Menu", href: "#menu" },
+  { name: "Pastry Classes", href: "#classes" },
   { name: "Offers", href: "#offers" },
   { name: "Gallery", href: "#gallery" },
   { name: "Testimonials", href: "#testimonials" },
@@ -41,7 +42,7 @@ export function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-10 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-background/80 backdrop-blur-md border-b border-border shadow-sm py-4"
           : "bg-transparent py-6"
@@ -50,7 +51,7 @@ export function Navbar() {
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <a href="#home" onClick={(e) => scrollToSection(e, "#home")} className="flex items-center gap-2 text-foreground group">
           <Wheat className="w-8 h-8 text-primary transition-transform group-hover:rotate-12" />
-          <span className="font-serif text-2xl font-bold tracking-tight">Heavens Bake</span>
+          <span className="font-serif text-2xl font-bold tracking-tight">Bummies Bakery</span>
         </a>
 
         {/* Desktop Nav */}

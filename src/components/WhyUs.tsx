@@ -40,7 +40,7 @@ export function WhyUs() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 max-w-2xl mx-auto">
           <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-3">The Difference</h2>
-          <h3 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">Why Heavens Bake?</h3>
+          <h3 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">Why Bummies Bakery?</h3>
           <p className="text-muted-foreground text-lg">
             We don't just bake; we craft experiences. Here's why our community chooses us for their most important moments.
           </p>

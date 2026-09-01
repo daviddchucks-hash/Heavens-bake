@@ -18,7 +18,7 @@ export function Footer() {
           <div className="space-y-6 lg:col-span-1">
             <div className="flex items-center gap-2 text-primary">
               <Wheat className="w-8 h-8" />
-              <span className="font-serif text-2xl font-bold tracking-tight text-white">Heavens Bake</span>
+              <span className="font-serif text-2xl font-bold tracking-tight text-white">Bummies Bakery</span>
             </div>
             <p className="text-background/70 leading-relaxed">
               Baking happiness into every creation. Artisan breads, decadent pastries, and custom cakes made with genuine passion.
@@ -85,7 +85,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-background/50">
-          <p>© 2024 Heavens Bake. All rights reserved. Made with ❤️</p>
+          <p>© 2024 Bummies Bakery. All rights reserved. Made with ❤️</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
