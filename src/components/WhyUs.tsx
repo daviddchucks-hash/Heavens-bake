@@ -36,17 +36,17 @@ const features = [
 
 export function WhyUs() {
   return (
-    <section className="py-24 bg-secondary/30">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 max-w-2xl mx-auto">
+    <section className="bg-secondary/30 py-16 sm:py-20 lg:py-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto mb-10 max-w-2xl text-center sm:mb-16">
           <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-3">The Difference</h2>
-          <h3 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">Why Bummies Bakery?</h3>
-          <p className="text-muted-foreground text-lg">
+          <h3 className="mb-4 font-serif text-3xl font-bold text-foreground sm:text-4xl md:text-5xl">Why Bummies Bakery?</h3>
+          <p className="text-base text-muted-foreground sm:text-lg">
             We don't just bake; we craft experiences. Here's why our community chooses us for their most important moments.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-y-12">
           {features.map((feature, idx) => (
             <motion.div
               key={idx}

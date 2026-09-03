@@ -26,12 +26,12 @@ const steps = [
 
 export function OrderProcess() {
   return (
-    <section id="order" className="py-24 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-20 max-w-2xl mx-auto">
+    <section id="order" className="bg-background py-16 sm:py-20 lg:py-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto mb-12 max-w-2xl text-center sm:mb-20">
           <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-3">Simple & Fast</h2>
-          <h3 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">How It Works</h3>
-          <p className="text-muted-foreground text-lg">
+          <h3 className="mb-4 font-serif text-3xl font-bold text-foreground sm:text-4xl md:text-5xl">How It Works</h3>
+          <p className="text-base text-muted-foreground sm:text-lg">
             From our oven to your table in four simple steps. We make it incredibly easy to enjoy premium baked goods.
           </p>
         </div>
@@ -48,7 +48,7 @@ export function OrderProcess() {
             />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10">
+          <div className="relative z-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
             {steps.map((step, idx) => (
               <motion.div
                 key={idx}
@@ -69,7 +69,7 @@ export function OrderProcess() {
                   <step.icon className="w-10 h-10 text-primary relative z-10" />
                 </div>
                 
-                <h4 className="font-serif text-2xl font-bold text-foreground mb-3">{step.title}</h4>
+                  <h4 className="mb-3 font-serif text-xl font-bold text-foreground sm:text-2xl">{step.title}</h4>
                 <p className="text-muted-foreground">{step.desc}</p>
               </motion.div>
             ))}

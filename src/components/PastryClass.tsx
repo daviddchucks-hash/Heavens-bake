@@ -89,11 +89,11 @@ export function PastryClass() {
   };
 
   return (
-    <section id="classes" className="py-24 bg-gradient-to-b from-background via-secondary/20 to-background relative overflow-hidden">
-      <div className="container mx-auto px-4">
+    <section id="classes" className="relative overflow-hidden bg-gradient-to-b from-background via-secondary/20 to-background py-16 sm:py-20 lg:py-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}
-        <div className="text-center mb-16 max-w-3xl mx-auto">
+        <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -109,7 +109,7 @@ export function PastryClass() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4"
+            className="mb-4 font-serif text-3xl font-bold text-foreground sm:text-4xl md:text-5xl"
           >
             Take a Pastry & Baking Class
           </motion.h2>
@@ -119,14 +119,14 @@ export function PastryClass() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-muted-foreground text-lg"
+            className="text-base text-muted-foreground sm:text-lg"
           >
             Unleash your inner baker with expert guidance from our master pastry chefs. Small class sizes ensure personalized instruction in a fun, state-of-the-art kitchen environment.
           </motion.p>
         </div>
 
         {/* Class Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8 xl:grid-cols-3">
           {classes.map((cls, idx) => (
             <motion.div
               key={cls.id}
@@ -134,7 +134,7 @@ export function PastryClass() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.15 }}
-              className="bg-card border border-border rounded-3xl overflow-hidden shadow-lg flex flex-col hover:shadow-2xl hover:border-primary/40 transition-all duration-300 group"
+              className="group flex flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-lg transition-all duration-300 hover:border-primary/40 hover:shadow-2xl"
             >
               {/* Image Banner */}
               <div className="relative h-64 overflow-hidden bg-muted">
@@ -154,9 +154,9 @@ export function PastryClass() {
               </div>
 
               {/* Card Body */}
-              <div className="p-6 md:p-8 flex flex-col flex-1 justify-between">
+              <div className="flex flex-1 flex-col justify-between p-5 sm:p-6 md:p-8">
                 <div>
-                  <h3 className="font-serif text-2xl font-bold text-foreground mb-3 leading-snug group-hover:text-primary transition-colors">
+                   <h3 className="mb-3 font-serif text-xl font-bold leading-snug text-foreground transition-colors group-hover:text-primary sm:text-2xl">
                     {cls.title}
                   </h3>
                   <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
@@ -208,19 +208,19 @@ export function PastryClass() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mt-16 p-8 rounded-3xl bg-card border border-border flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm"
+         className="mt-12 flex flex-col gap-5 rounded-3xl border border-border bg-card p-5 shadow-sm sm:mt-16 sm:gap-6 sm:p-8 md:flex-row md:items-center md:justify-between"
         >
-          <div className="flex items-center gap-4">
+           <div className="flex min-w-0 items-start gap-4 sm:items-center">
             <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
               <Award className="w-8 h-8" />
             </div>
             <div>
-              <h4 className="font-serif text-xl font-bold text-foreground">Custom Private & Corporate Baking Classes</h4>
+               <h4 className="font-serif text-lg font-bold text-foreground sm:text-xl">Custom Private & Corporate Baking Classes</h4>
               <p className="text-muted-foreground text-sm">Looking for a unique team-building activity or private celebration? We design bespoke masterclasses tailored for groups up to 20 people.</p>
             </div>
           </div>
-          <a href="#contact" className="shrink-0">
-            <Button variant="outline" className="rounded-full px-6 h-12 font-bold">
+           <a href="#contact" className="w-full shrink-0 md:w-auto">
+             <Button variant="outline" className="h-12 w-full rounded-full px-6 font-bold md:w-auto">
               Inquire Private Event
             </Button>
           </a>
@@ -230,7 +230,7 @@ export function PastryClass() {
 
       {/* Booking Dialog */}
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className="sm:max-w-[500px] rounded-3xl border border-border bg-card p-6 md:p-8">
+         <DialogContent className="max-h-[90vh] w-[calc(100%-2rem)] max-w-[500px] overflow-y-auto rounded-3xl border border-border bg-card p-5 sm:p-6 md:p-8">
           <DialogHeader>
             <DialogTitle className="font-serif text-2xl font-bold text-foreground">
               Reserve Your Spot
@@ -292,11 +292,11 @@ export function PastryClass() {
               </Select>
             </div>
 
-            <div className="pt-4 flex justify-end gap-3">
-              <Button type="button" variant="ghost" onClick={() => setIsDialogOpen(false)} className="rounded-xl">
+             <div className="flex flex-col-reverse gap-3 pt-4 sm:flex-row sm:justify-end">
+               <Button type="button" variant="ghost" onClick={() => setIsDialogOpen(false)} className="w-full rounded-xl sm:w-auto">
                 Cancel
               </Button>
-              <Button type="submit" className="rounded-xl font-bold px-6">
+               <Button type="submit" className="w-full rounded-xl px-6 font-bold sm:w-auto">
                 Confirm Reservation
               </Button>
             </div>

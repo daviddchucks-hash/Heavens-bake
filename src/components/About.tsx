@@ -45,9 +45,9 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 
 export function About() {
   return (
-    <section id="about" className="py-24 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
+    <section id="about" className="overflow-hidden bg-background py-16 sm:py-20 lg:py-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center gap-10 lg:flex-row lg:gap-16">
           
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
@@ -58,10 +58,10 @@ export function About() {
           >
             <div>
               <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-3">Our Story</h2>
-              <h3 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">
+              <h3 className="mb-5 font-serif text-3xl font-bold text-foreground sm:mb-6 sm:text-4xl md:text-5xl">
                 Baking happiness into every creation since 2010.
               </h3>
-              <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
+              <div className="space-y-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
                 <p>
                   What started as a small neighborhood kitchen has blossomed into a beloved destination for artisan breads and exquisite pastries. At Bummies Bakery, we believe that the secret to extraordinary flavor lies in patience, passion, and the finest ingredients.
                 </p>
@@ -71,16 +71,16 @@ export function About() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-8 pt-8 border-t border-border">
+            <div className="grid grid-cols-2 gap-4 border-t border-border pt-6 sm:gap-8 sm:pt-8">
               {stats.map((stat, index) => {
                 const Icon = stat.icon;
                 return (
                   <div key={index} className="flex flex-col gap-2">
-                    <div className="flex items-center gap-3 text-primary">
-                      <Icon className="w-6 h-6" />
+                    <div className="flex items-center gap-2 text-primary sm:gap-3">
+                      <Icon className="h-5 w-5 shrink-0 sm:h-6 sm:w-6" />
                       <Counter value={stat.value} suffix={stat.suffix} />
                     </div>
-                    <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider">{stat.label}</span>
+                    <span className="text-xs font-medium uppercase leading-snug tracking-wider text-muted-foreground sm:text-sm">{stat.label}</span>
                   </div>
                 );
               })}
@@ -94,7 +94,7 @@ export function About() {
             transition={{ duration: 0.8 }}
             className="flex-1 relative"
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/5] max-w-md mx-auto lg:ml-auto">
+            <div className="relative mx-auto aspect-[4/5] max-w-md overflow-hidden rounded-2xl shadow-2xl lg:ml-auto">
               <img 
                 src={aboutImg} 
                 alt="Professional baker" 

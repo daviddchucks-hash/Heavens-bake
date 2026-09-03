@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 
 export function Footer() {
   return (
-    <footer className="bg-foreground text-background pt-24 pb-8 relative overflow-hidden">
+    <footer className="relative overflow-hidden bg-foreground pb-8 pt-20 text-background sm:pt-24">
       {/* Wave top border */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-none rotate-180 text-background">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-[50px] md:h-[80px]">
@@ -13,7 +13,7 @@ export function Footer() {
       </div>
 
       <div className="container mx-auto px-4 mt-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="mb-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:mb-16 lg:grid-cols-4 lg:gap-12">
           
           <div className="space-y-6 lg:col-span-1">
             <div className="flex items-center gap-2 text-primary">
@@ -23,7 +23,7 @@ export function Footer() {
             <p className="text-background/70 leading-relaxed">
               Baking happiness into every creation. Artisan breads, decadent pastries, and custom cakes made with genuine passion.
             </p>
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-3 sm:gap-4">
               <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
@@ -84,9 +84,9 @@ export function Footer() {
 
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-background/50">
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-center text-sm text-background/50 sm:flex-row sm:text-left">
           <p>© 2024 Bummies Bakery. All rights reserved. Made with ❤️</p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
             <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
           </div>

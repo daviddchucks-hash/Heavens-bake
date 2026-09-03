@@ -34,14 +34,14 @@ export function Offers() {
   }, []);
 
   return (
-    <section id="offers" className="py-24 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="offers" className="bg-background py-16 sm:py-20 lg:py-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Banner */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-primary/90 to-primary text-primary-foreground p-8 md:p-12 shadow-xl mb-16 flex flex-col md:flex-row items-center justify-between gap-8"
+          className="relative mb-10 flex flex-col gap-8 overflow-hidden rounded-3xl bg-gradient-to-r from-primary/90 to-primary p-5 text-primary-foreground shadow-xl sm:mb-16 sm:p-8 md:flex-row md:items-center md:justify-between md:p-12"
         >
           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&q=80')] opacity-10 mix-blend-overlay bg-cover bg-center" />
           
@@ -49,31 +49,31 @@ export function Offers() {
             <span className="inline-block px-4 py-1.5 rounded-full bg-black/20 backdrop-blur-md text-sm font-bold tracking-wider uppercase mb-4">
               Limited Time Offer
             </span>
-            <h3 className="font-serif text-4xl md:text-5xl font-bold mb-4">
+            <h3 className="mb-4 font-serif text-3xl font-bold sm:text-4xl md:text-5xl">
               Summer Bakery Festival
             </h3>
-            <p className="text-primary-foreground/90 text-lg mb-0">
+            <p className="text-base text-primary-foreground/90 sm:text-lg">
               Celebrate the season with our exclusive discounts on all large orders and custom event cakes.
             </p>
           </div>
 
-          <div className="relative z-10 flex gap-4 text-center">
+          <div className="relative z-10 grid w-full max-w-sm grid-cols-4 gap-2 text-center sm:gap-4 md:w-auto">
             {[
               { label: 'Days', value: timeLeft.days },
               { label: 'Hours', value: timeLeft.hours },
               { label: 'Mins', value: timeLeft.minutes },
               { label: 'Secs', value: timeLeft.seconds },
             ].map((time, idx) => (
-              <div key={idx} className="bg-background/10 backdrop-blur-md border border-white/20 rounded-xl p-3 md:p-4 min-w-[70px] md:min-w-[80px]">
-                <div className="text-2xl md:text-4xl font-bold font-mono">{time.value.toString().padStart(2, '0')}</div>
-                <div className="text-xs uppercase tracking-wider mt-1 opacity-80">{time.label}</div>
+              <div key={idx} className="min-w-0 rounded-xl border border-white/20 bg-background/10 p-2 backdrop-blur-md sm:p-3 md:min-w-[80px] md:p-4">
+                <div className="font-mono text-xl font-bold sm:text-2xl md:text-4xl">{time.value.toString().padStart(2, '0')}</div>
+                <div className="mt-1 text-[10px] uppercase tracking-wider opacity-80 sm:text-xs">{time.label}</div>
               </div>
             ))}
           </div>
         </motion.div>
 
         {/* 3 Offer Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-3 lg:gap-8">
           {[
             {
               icon: CakeSlice,
@@ -103,7 +103,7 @@ export function Offers() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.15 }}
-              className={`relative p-8 rounded-2xl ${offer.color} border border-border hover:shadow-lg transition-shadow`}
+              className={`relative rounded-2xl border border-border p-5 transition-shadow hover:shadow-lg sm:p-8 ${offer.color}`}
             >
               <div className="absolute top-4 right-4 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
                 {offer.badge}

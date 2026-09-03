@@ -61,15 +61,15 @@ export function Testimonials() {
   const prev = () => setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
   return (
-    <section id="testimonials" className="py-24 bg-accent/20 relative overflow-hidden">
+    <section id="testimonials" className="relative overflow-hidden bg-accent/20 py-16 sm:py-20 lg:py-24">
       {/* Decorative blobs */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-10 text-center sm:mb-16">
           <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-3">Reviews</h2>
-          <h3 className="font-serif text-4xl md:text-5xl font-bold text-foreground">What Our Customers Say</h3>
+          <h3 className="font-serif text-3xl font-bold text-foreground sm:text-4xl md:text-5xl">What Our Customers Say</h3>
         </div>
 
         <div 
@@ -77,8 +77,8 @@ export function Testimonials() {
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
-          <div className="bg-background/60 backdrop-blur-xl border border-border p-8 md:p-12 rounded-3xl shadow-xl min-h-[300px] flex items-center justify-center relative">
-            <Quote className="absolute top-8 left-8 w-16 h-16 text-primary/10" />
+          <div className="relative flex min-h-[300px] items-center justify-center rounded-3xl border border-border bg-background/60 p-5 shadow-xl backdrop-blur-xl sm:p-8 md:p-12">
+            <Quote className="absolute left-4 top-4 h-12 w-12 text-primary/10 sm:left-8 sm:top-8 sm:h-16 sm:w-16" />
             
             <AnimatePresence mode="wait">
               <motion.div
@@ -87,7 +87,7 @@ export function Testimonials() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -50 }}
                 transition={{ duration: 0.5 }}
-                className="text-center"
+                className="px-7 text-center sm:px-4"
               >
                 <div className="flex justify-center gap-1 mb-6">
                   {[...Array(testimonials[current].rating)].map((_, i) => (
@@ -95,7 +95,7 @@ export function Testimonials() {
                   ))}
                 </div>
                 
-                <p className="text-xl md:text-2xl font-serif text-foreground leading-relaxed mb-8 italic">
+                <p className="mb-8 font-serif text-base italic leading-relaxed text-foreground sm:text-xl md:text-2xl">
                   "{testimonials[current].text}"
                 </p>
                 
@@ -115,13 +115,13 @@ export function Testimonials() {
           {/* Navigation */}
           <button 
             onClick={prev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-1/2 w-12 h-12 bg-background border border-border shadow-lg rounded-full flex items-center justify-center text-foreground hover:bg-secondary transition-colors"
+            className="absolute left-1 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background text-foreground shadow-lg transition-colors hover:bg-secondary sm:left-0 sm:h-12 sm:w-12 sm:-translate-x-1/2"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
           <button 
             onClick={next}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-1/2 w-12 h-12 bg-background border border-border shadow-lg rounded-full flex items-center justify-center text-foreground hover:bg-secondary transition-colors"
+            className="absolute right-1 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background text-foreground shadow-lg transition-colors hover:bg-secondary sm:right-0 sm:h-12 sm:w-12 sm:translate-x-1/2"
           >
             <ChevronRight className="w-6 h-6" />
           </button>

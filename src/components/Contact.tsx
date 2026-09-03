@@ -57,26 +57,26 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 bg-secondary/20">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+    <section id="contact" className="bg-secondary/20 py-16 sm:py-20 lg:py-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-10 text-center sm:mb-16">
           <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-3">Get in Touch</h2>
-          <h3 className="font-serif text-4xl md:text-5xl font-bold text-foreground">Contact & Location</h3>
+          <h3 className="font-serif text-3xl font-bold text-foreground sm:text-4xl md:text-5xl">Contact & Location</h3>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:gap-16">
           
           {/* Form Side */}
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-card p-8 rounded-3xl shadow-lg border border-border"
+            className="rounded-3xl border border-border bg-card p-5 shadow-lg sm:p-8"
           >
             <h4 className="font-serif text-2xl font-bold mb-6">Send us a Message</h4>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6">
                   <FormField
                     control={form.control}
                     name="name"
@@ -105,7 +105,7 @@ export function Contact() {
                   />
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6">
                   <FormField
                     control={form.control}
                     name="phone"
@@ -177,14 +177,14 @@ export function Contact() {
             viewport={{ once: true }}
             className="space-y-8"
           >
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
               {[
                 { icon: MapPin, title: "Address", text: "12 Baker Street, London, W1U 6AP" },
                 { icon: Phone, title: "Phone", text: "+44 20 7946 0958" },
                 { icon: Mail, title: "Email", text: "hello@heavensbake.com" },
                 { icon: Clock, title: "Hours", text: "Mon-Fri: 7am-7pm\nSat-Sun: 8am-6pm" },
               ].map((info, idx) => (
-                <div key={idx} className="bg-card p-6 rounded-2xl shadow-sm border border-border flex items-start gap-4">
+                <div key={idx} className="flex items-start gap-3 rounded-2xl border border-border bg-card p-4 shadow-sm sm:gap-4 sm:p-6">
                   <div className="p-3 bg-primary/10 rounded-xl text-primary">
                     <info.icon className="w-6 h-6" />
                   </div>
@@ -196,7 +196,7 @@ export function Contact() {
               ))}
             </div>
 
-            <div className="rounded-3xl overflow-hidden shadow-lg h-[300px] border border-border">
+            <div className="h-64 overflow-hidden rounded-3xl border border-border shadow-lg sm:h-[300px]">
               <iframe 
                 src="https://maps.google.com/maps?q=51.5237,-0.1585&z=15&output=embed" 
                 width="100%" 

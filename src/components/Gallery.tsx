@@ -18,18 +18,18 @@ export function Gallery() {
   const [selectedImg, setSelectedImg] = useState<string | null>(null);
 
   return (
-    <section id="gallery" className="py-24 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 max-w-2xl mx-auto">
+    <section id="gallery" className="bg-background py-16 sm:py-20 lg:py-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto mb-10 max-w-2xl text-center sm:mb-16">
           <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-3">Portfolio</h2>
-          <h3 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">Our Gallery</h3>
-          <p className="text-muted-foreground text-lg">
+          <h3 className="mb-4 font-serif text-3xl font-bold text-foreground sm:text-4xl md:text-5xl">Our Gallery</h3>
+          <p className="text-base text-muted-foreground sm:text-lg">
             A visual journey through our daily creations. Every piece is a unique work of edible art.
           </p>
         </div>
 
         {/* Masonry Grid via CSS columns */}
-        <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
+        <div className="columns-1 gap-4 space-y-4 sm:columns-2 lg:columns-3 xl:columns-4">
           {galleryImages.map((src, idx) => (
             <motion.div
               key={idx}
@@ -61,11 +61,11 @@ export function Gallery() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-3 backdrop-blur-sm sm:p-4"
             onClick={() => setSelectedImg(null)}
           >
             <button 
-              className="absolute top-6 right-6 text-white/70 hover:text-white p-2"
+              className="absolute right-3 top-3 p-2 text-white/70 hover:text-white sm:right-6 sm:top-6"
               onClick={() => setSelectedImg(null)}
             >
               <X className="w-8 h-8" />
@@ -76,7 +76,7 @@ export function Gallery() {
               exit={{ scale: 0.9 }}
               src={selectedImg}
               alt="Lightbox"
-              className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+              className="max-h-[85vh] max-w-full rounded-lg object-contain shadow-2xl sm:max-h-[90vh]"
               onClick={(e) => e.stopPropagation()} // Prevent click from closing when clicking image
             />
           </motion.div>

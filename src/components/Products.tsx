@@ -24,17 +24,17 @@ const products = [
 
 export function Products() {
   return (
-    <section id="menu" className="py-24 bg-secondary/30">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 max-w-2xl mx-auto">
+    <section id="menu" className="bg-secondary/30 py-16 sm:py-20 lg:py-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto mb-10 max-w-2xl text-center sm:mb-16">
           <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-3">Our Menu</h2>
-          <h3 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">Our Bestsellers</h3>
-          <p className="text-muted-foreground text-lg">
+          <h3 className="mb-4 font-serif text-3xl font-bold text-foreground sm:text-4xl md:text-5xl">Our Bestsellers</h3>
+          <p className="text-base text-muted-foreground sm:text-lg">
             Discover our most loved creations, baked fresh daily with premium ingredients and uncompromising attention to detail.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:gap-6 xl:grid-cols-4">
           {products.map((product, index) => (
             <motion.div
               key={product.id}
@@ -42,7 +42,7 @@ export function Products() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col border border-border"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all duration-300 hover:shadow-xl"
             >
               <div className="relative aspect-square overflow-hidden bg-muted">
                 <img 
@@ -55,9 +55,9 @@ export function Products() {
                 </div>
               </div>
               
-              <div className="p-6 flex flex-col flex-1">
-                <h4 className="font-serif text-xl font-bold text-foreground mb-2 line-clamp-1">{product.name}</h4>
-                <p className="text-muted-foreground text-sm mb-6 flex-1 line-clamp-2">
+              <div className="flex flex-1 flex-col p-4 sm:p-6">
+                <h4 className="mb-2 line-clamp-2 font-serif text-lg font-bold text-foreground sm:text-xl">{product.name}</h4>
+                <p className="mb-4 line-clamp-2 flex-1 text-sm text-muted-foreground sm:mb-6">
                   {product.desc}
                 </p>
                 <Button className="w-full gap-2 rounded-xl group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
