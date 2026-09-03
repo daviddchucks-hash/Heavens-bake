@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Users, Clock, Cake, ShoppingBag } from "lucide-react";
-import aboutImg from "@/assets/images/about.webp";
+import aboutImg from "@/assets/images/bummies-bread-shelf.webp";
 
 const stats = [
   { label: "Happy Customers", value: 10000, suffix: "+", icon: Users },
@@ -97,7 +97,7 @@ export function About() {
             <div className="relative mx-auto aspect-[4/5] max-w-md overflow-hidden rounded-2xl shadow-2xl lg:ml-auto">
               <img 
                 src={aboutImg} 
-                alt="Professional baker" 
+                alt="Freshly stocked Bummies Bakery bread shelves" 
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 border-2 border-white/20 rounded-2xl m-4 pointer-events-none" />

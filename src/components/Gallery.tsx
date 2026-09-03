@@ -1,17 +1,22 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ZoomIn, X } from "lucide-react";
+import breadShelf from "@/assets/images/bummies-bread-shelf.webp";
+import scotchEggs from "@/assets/images/bummies-scotch-eggs.webp";
+import pastryRolls from "@/assets/images/bummies-pastry-rolls.webp";
+import cinnamonRolls from "@/assets/images/bummies-cinnamon-rolls.webp";
+import wholewheatBread from "@/assets/images/bummies-wholewheat.webp";
+import sandwiches from "@/assets/images/bummies-sandwiches.webp";
+import bakeryBun from "@/assets/images/bummies-bun.webp";
 
-// Real high-quality food photography from unsplash matching the requested aesthetic
 const galleryImages = [
-  "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&q=80&w=800", // Chocolate cake macro
-  "https://images.unsplash.com/photo-1589367920969-ab8e050bfc19?auto=format&fit=crop&q=80&w=800", // Sourdough
-  "https://images.unsplash.com/photo-1569864358642-9d1684040f43?auto=format&fit=crop&q=80&w=800", // Macarons
-  "https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&fit=crop&q=80&w=800", // Wedding cake
-  "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=800", // Baker hands dough
-  "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&q=80&w=800", // Pastry case
-  "https://images.unsplash.com/photo-1509365465985-25d11c17e812?auto=format&fit=crop&q=80&w=800", // Cinnamon rolls
-  "https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?auto=format&fit=crop&q=80&w=800", // Berry tart
+  breadShelf,
+  scotchEggs,
+  pastryRolls,
+  cinnamonRolls,
+  wholewheatBread,
+  sandwiches,
+  bakeryBun,
 ];
 
 export function Gallery() {

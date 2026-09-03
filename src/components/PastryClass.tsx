@@ -8,9 +8,9 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 
-import croissantsImg from "@/assets/images/croissants.webp";
-import artisanBreadImg from "@/assets/images/artisan-bread.webp";
-import weddingCakeImg from "@/assets/images/wedding-cake.webp";
+import croissantsImg from "@/assets/images/bummies-pastry-rolls.webp";
+import artisanBreadImg from "@/assets/images/bummies-wholewheat.webp";
+import weddingCakeImg from "@/assets/images/bummies-cinnamon-rolls.webp";
 
 const classes = [
   {

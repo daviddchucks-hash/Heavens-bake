@@ -2,24 +2,23 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ShoppingCart } from "lucide-react";
 
-import weddingCake from "@/assets/images/wedding-cake.webp";
-import birthdayCake from "@/assets/images/birthday-cake.webp";
-import cupcakes from "@/assets/images/cupcakes.webp";
-import doughnuts from "@/assets/images/doughnuts.webp";
-import cookies from "@/assets/images/cookies.webp";
-import artisanBread from "@/assets/images/artisan-bread.webp";
-import croissants from "@/assets/images/croissants.webp";
-import pastries from "@/assets/images/pastries.webp";
+import scotchEggs from "@/assets/images/bummies-scotch-eggs.webp";
+import wholewheatBread from "@/assets/images/bummies-wholewheat.webp";
+import cinnamonRolls from "@/assets/images/bummies-cinnamon-rolls.webp";
+import pastryRolls from "@/assets/images/bummies-pastry-rolls.webp";
+import bakeryBun from "@/assets/images/bummies-bun.webp";
+import breadShelf from "@/assets/images/bummies-bread-shelf.webp";
+import sandwiches from "@/assets/images/bummies-sandwiches.webp";
 
 const products = [
-  { id: 1, name: "Elegant Wedding Cake", desc: "Multi-tier vanilla bean cake with custom floral designs.", price: "$150", img: weddingCake },
-  { id: 2, name: "Rainbow Birthday Cake", desc: "Colorful funfetti layers with rich buttercream frosting.", price: "$65", img: birthdayCake },
-  { id: 3, name: "Gourmet Cupcakes", desc: "Assorted box of 12 artisan cupcakes in pastel colors.", price: "$36", img: cupcakes },
-  { id: 4, name: "Artisan Doughnuts", desc: "Hand-glazed brioche doughnuts with colorful toppings.", price: "$24", img: doughnuts },
-  { id: 5, name: "Classic Cookie Box", desc: "Freshly baked chocolate chip and sugar cookies.", price: "$28", img: cookies },
-  { id: 6, name: "Sourdough Loaf", desc: "Rustic artisan bread with a perfect crust and crumb.", price: "$12", img: artisanBread },
-  { id: 7, name: "Butter Croissants", desc: "Golden, flaky, traditional French croissants (Box of 4).", price: "$18", img: croissants },
-  { id: 8, name: "French Pastries", desc: "Assortment of fine eclairs and fruit tarts.", price: "$42", img: pastries },
+  { id: 1, name: "Scotch Egg Platter", desc: "Crisp, golden Scotch eggs prepared for sharing.", price: "$24", img: scotchEggs },
+  { id: 2, name: "Whole Wheat Bread", desc: "Soft, wholesome sliced bread for everyday breakfasts.", price: "$8", img: wholewheatBread },
+  { id: 3, name: "Cinnamon Swirls", desc: "Soft baked rolls with warm cinnamon through every layer.", price: "$18", img: cinnamonRolls },
+  { id: 4, name: "Golden Pastry Rolls", desc: "Flaky savoury rolls baked until beautifully golden.", price: "$22", img: pastryRolls },
+  { id: 5, name: "Fresh Bakery Bun", desc: "Pillowy, oven-fresh bun with a rich golden finish.", price: "$10", img: bakeryBun },
+  { id: 6, name: "Daily Bread Selection", desc: "A freshly stocked selection from our bakery shelves.", price: "$12", img: breadShelf },
+  { id: 7, name: "Savoury Sandwiches", desc: "Hand-packed sandwiches made fresh for quick lunches.", price: "$16", img: sandwiches },
+  { id: 8, name: "Pastry Roll Box", desc: "A generous box of flaky golden rolls for the table.", price: "$30", img: pastryRolls },
 ];
 
 export function Products() {

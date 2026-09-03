@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Gift, CakeSlice, Award } from "lucide-react";
+import breadShelfImg from "@/assets/images/bummies-bread-shelf.webp";
 
 export function Offers() {
   const [timeLeft, setTimeLeft] = useState({
@@ -43,7 +44,10 @@ export function Offers() {
           viewport={{ once: true }}
           className="relative mb-10 flex flex-col gap-8 overflow-hidden rounded-3xl bg-gradient-to-r from-primary/90 to-primary p-5 text-primary-foreground shadow-xl sm:mb-16 sm:p-8 md:flex-row md:items-center md:justify-between md:p-12"
         >
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&q=80')] opacity-10 mix-blend-overlay bg-cover bg-center" />
+          <div
+            className="absolute inset-0 bg-cover bg-center opacity-10 mix-blend-overlay"
+            style={{ backgroundImage: `url(${breadShelfImg})` }}
+          />
           
           <div className="relative z-10 max-w-xl text-center md:text-left">
             <span className="inline-block px-4 py-1.5 rounded-full bg-black/20 backdrop-blur-md text-sm font-bold tracking-wider uppercase mb-4">
